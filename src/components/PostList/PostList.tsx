@@ -9,6 +9,8 @@ interface Post {
   name: string;
   description: string;
   body: string;
+  created_at: string; // Data de criação da postagem
+  autor: string; // Autor da postagem
 }
 
 interface PostListProps {
@@ -24,6 +26,8 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
           name={post.name}
           description={post.description}
           body={post.body}
+          createdAt={post.created_at}
+          author={post.autor}
         />
       ))}
     </PostListContainer>
